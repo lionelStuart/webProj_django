@@ -7,3 +7,8 @@ from django.shortcuts import render
 @login_required
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
+
+
+def register(request):
+
+    return render(request, 'accounts/register.html')
