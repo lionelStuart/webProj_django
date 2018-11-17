@@ -126,3 +126,18 @@ STATIC_URL = '/static/'
 # url to manage user upload media file
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# email settings
+# needed
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "SMTP.126.com"
+EMAIL_HOST_USER = "phoenix_181714@126.com"
+# 授权码
+EMAIL_HOST_PASSWORD = "neon1234neon"
+EMAIL_PORT = 25
+# ssl
+EMAIL_USE_TLS = False
+# needed
+DEFAULT_FROM_EMAIL = "phoenix_181714@126.com"
+# EMAIL_USE_SSL = True
