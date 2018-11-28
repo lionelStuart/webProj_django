@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'blog',
     'shop',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,6 @@ EMAIL_USE_TLS = False
 # needed
 DEFAULT_FROM_EMAIL = "phoenix_181714@126.com"
 # EMAIL_USE_SSL = True
+
+# cart session
+CART_SESSION_ID = 'cart'
