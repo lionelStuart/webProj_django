@@ -88,5 +88,5 @@ class Cart(object):
         get cart price summary
         :return:
         """
-        return sum(Decimal(item['price'] * item['quantity']
-                           for item in self.cart.values()))
+        return sum(Decimal(item['price']) * item['quantity']
+                   for item in self.cart.values())

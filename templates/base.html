@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,23 @@
         </ul>
         {% endif %}
 
+
+
+
         <span class="user">
+
+            {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    Your cart:
+                    <a href="{% url "cart:cart_detail" %}">
+                        {{ total_items }} item{{ total_items|pluralize }}, ${{ cart.get_total_price }}
+                    </a>
+                {% else %}
+                    Your cart is empty.
+                {% endif %}
+            {% endwith %}
+
+
         {% if request.user.is_authenticated %}
             Hello {{ request.user.first_name }}, <a href="{% url "logout" %}">Logout</a>
         {% else %}
